@@ -10,19 +10,16 @@
 void insertion_sort_list(listint_t **list)
 {
 	listint_t *current = (*list)->next;
-	listint_t next;
-	listint_t tmp;
-
 
 	if (!list || !*list || !(*list)->next)
 		return;
 
 	while(current)
 	{
-		*next = current->next;
-		*tmp = current;
+		listint_t *next = current->next;
+		listint_t *tmp = current;
 
-		while (tmp->prev && tmp->n < tmp->prev->n);
+		while (tmp->prev && tmp->n < tmp->prev->n)
 		{
 			listint_t *node1 = tmp->prev;
 			listint_t *node2 = tmp;
@@ -32,21 +29,21 @@ void insertion_sort_list(listint_t **list)
 
 			if (node1->prev)
 				node1->prev->next = node2;
+
 			else
-				*list = node;
+				*list = node2;
 
-			if (node2-->next)
-				node2-->next--prev == node1;
+			if (node2->next)
+				node2->next->prev == node1;
 
-			node1->noext = node2->2next;
-			node2->prev = node1-prev;
+			node1->next = node2->next;
+			node2->prev = node1->prev;
 			node1->prev = node2;
 			node2->next = node1;
 
 			print_list(*list);
 		}
-	current = next;
-
+		current = next;
 	}
 
 }
