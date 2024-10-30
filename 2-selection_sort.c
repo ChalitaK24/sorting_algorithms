@@ -3,7 +3,8 @@
 /**
  * selection_sort - function that sorts an array of int
  * ascending order using the Selection sort algorithm
- *
+ * @size: number of elements in the list (num of index)
+ * @array: array of integers
  *
  * Return: void
  */
@@ -31,6 +32,7 @@ void selection_sort(int *array, size_t size)
 		if (index_mn != i)
 		{
 			int tmp = array[i];
+
 			array[i] = array[index_mn];
 			array[index_mn] = tmp;
 
