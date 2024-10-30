@@ -1,5 +1,5 @@
 #include "sort.h"
-
+#include <stddef.h>
 /**
  * bubble_sort - Bubble sort implemetation funcion
  * @new:
@@ -11,16 +11,17 @@ void bubble_sort(int *array, size_t size)
 {
 	int start;
 	int swap = 0;
-	size_t i = 0;
+	size_t i;
+	size_t j;
 
 	if(array == NULL)
-		return (0);
+		return;
 
-	for(size_t i; i < size - 1; i++)
+	for(i = 0; i < size - 1; i++)
 	{
-		for (size_t j; j < size - 1 - i; j++)
+		for (j = 0; j < size - 1 - i; j++)
 		{
-			if (array[j] > array[j +1])
+			if (array[j] > array[j + 1])
 			{
 				start = array[j]
 				array[j] = array[j+1 1];
