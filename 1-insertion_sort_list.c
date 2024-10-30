@@ -24,8 +24,6 @@ void insertion_sort_list(listint_t **list)
 			listint_t *node1 = tmp->prev;
 			listint_t *node2 = tmp;
 
-			if (!node1 || !node2 || node1 == node2)
-				return;
 
 			if (node1->prev)
 				node1->prev->next = node2;
