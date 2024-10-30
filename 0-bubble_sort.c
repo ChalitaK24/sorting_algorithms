@@ -2,9 +2,10 @@
 #include <stddef.h>
 /**
  * bubble_sort - Bubble sort implemetation funcion
- * @new:
+ * @array: array of integers to be sorteed
+ * @size: number of elements in array
  *
- *
+ * Return: void
  */
 
 void bubble_sort(int *array, size_t size)
@@ -13,10 +14,10 @@ void bubble_sort(int *array, size_t size)
 	size_t i;
 	size_t j;
 
-	if(array == NULL)
+	if (array == NULL)
 		return;
 
-	for(i = 0; i < size - 1; i++)
+	for (i = 0; i < size - 1; i++)
 	{
 		for (j = 0; j < size - 1 - i; j++)
 		{
