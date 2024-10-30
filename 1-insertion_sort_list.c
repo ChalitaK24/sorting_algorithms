@@ -11,15 +11,19 @@
 void insertion_sort_list(listint_t **list)
 {
 
+	listint_t *current;
+	listint_t *next; 
+	listint_t *tmp;
+
 	if (!list || !*list || !(*list)->next)
 		return;
 
-	listint_t *current = (*list)->next;
+	current = (*list)->next;
 
 	while (current)
 	{
-		listint_t *next = current->next;
-		listint_t *tmp = current;
+		next = current->next;
+		tmp = current;
 
 		while (tmp->prev && tmp->n < tmp->prev->n)
 		{
