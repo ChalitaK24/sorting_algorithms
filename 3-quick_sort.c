@@ -24,7 +24,7 @@ void sort(int *array, int lower, int higher, size_t size)
 		int pivot = array[higher];
 		int i = lower;
 		int j;
-		int same;
+		int same = 1;
 
 		for (j = lower; j <  higher; j++)
 		{
