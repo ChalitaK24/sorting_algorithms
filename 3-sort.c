@@ -17,7 +17,7 @@ void sort(int * array, int lower, int higher, size_t size)
 
 	if (lower < higher)
 	{
-		pivot = array[high];
+		pivot = array[higher];
 		
 		for (j = lower; j < higher; j++)
 		{
@@ -27,7 +27,7 @@ void sort(int * array, int lower, int higher, size_t size)
 				{
 					tmp = array[i];
 					array[i] = array[j];
-					arrray[j] = tmp;
+					array[j] = tmp;
 
 					print_array(array, size);
 				}
@@ -35,11 +35,11 @@ void sort(int * array, int lower, int higher, size_t size)
 			}
 		}
 
-		if (i != hiher)
+		if (i != higher)
 		{
 			tmp = array[i];
 			array[i] = array[higher];
-			array[higher] = tmep;
+			array[higher] = tmp;
 
 			print_array(array, size);
 		}

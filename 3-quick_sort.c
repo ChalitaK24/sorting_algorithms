@@ -11,7 +11,7 @@
 void quick_sort(int *array, size_t size)
 {
 	if (!array)
-		retunr;
+		return;
 
 	sort(array, 0, size - 1, size);
 
