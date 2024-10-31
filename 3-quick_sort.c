@@ -16,3 +16,39 @@ void quick_sort(int *array, size_t size)
 	sort(array, 0, size - 1, size);
 
 }
+
+void sort(int *array, int lower, int higher, size_t size)
+{
+	if (lower < higher)
+	{
+		int pivot = array[higher];
+		int i = lower;
+		int j;
+		
+		for (j = lower; j <  higher; j++)
+		{
+			if (array[j] < pivot)
+			{
+				if (i != j)
+				{
+					int tmp = array[i];
+					array[i] = array[j];
+					array[j] = tmp;
+					print_array(array, size);
+				}
+				i++;
+			}
+		}
+
+		if (i != higher)
+		{
+			int tmp = array[i];
+			array[i] = array[higher];
+			array[higher] = tmp;
+			print_array(array, size);
+		}
+
+		sort(array, lower, i - 1, size);
+		sort(array, i + 1, higher, size);
+	}
+}
