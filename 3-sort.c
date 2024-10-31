@@ -3,9 +3,19 @@
 /**
  * sort - function identifies the pivot and rearranges the array elements
  * then swaps and prints array , makes recurrsive calls to itself to sort 
+ * quick_sort - function sorts an array of integers in
+ * ascending order using the quick sort algorithm
  *
  * Return: void
  */
+void quick_sort(int *array, size_t size)
+{
+	if (array || size < 2)
+		return;
+
+	sort(array, 0, size -1, size);
+}
+
 
 void sort(int * array, int lower, int higher, size_t size)
 {
