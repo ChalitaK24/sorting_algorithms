@@ -19,16 +19,15 @@ void quick_sort(int *array, size_t size)
 
 void sort(int * array, int lower, int higher, size_t size)
 {
-	int pivot;
-	int i = lower;
-	int j;
-	int tmp;
 
 
 	if (lower < higher)
 	{
-		pivot = array[higher];
-		
+		int pivot = array[higher];
+		int i = lower;
+		int j; 
+		int tmp;
+
 		for (j = lower; j < higher; j++)
 		{
 			if (array[j] < pivot)
@@ -54,7 +53,7 @@ void sort(int * array, int lower, int higher, size_t size)
 			print_array(array, size);
 		}
 		
-		sort(array, lower, i -1, size);
-		sort(array, i +1, higher, size);
+		sort(array, lower, i - 1, size);
+		sort(array, i + 1, higher, size);
 	}
 }
